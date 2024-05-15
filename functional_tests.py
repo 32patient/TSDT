@@ -41,7 +41,7 @@ class NewVisitorTest(unittest.TestCase):
         # 待办事项表格中显示了"1: Buy flowers"
         inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
-        self.check_for_row_in_list_table('1: But flowers')
+        self.check_for_row_in_list_table('1: Buy flowers')
         
         # 页面中又显示了一个文本输入框，可以输入其他待办事项
         # 他输入了"Give a gift to Lisi"
