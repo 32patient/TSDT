@@ -86,7 +86,7 @@ class NewVisitorTest(LiveServerTestCase):
         # 王五访问首页
         # 页面中看不到张三的清单
         self.browser.get(self.live_server_url)
-        page_text = self.browser.find_element(By.TAGNAME, 'body').text
+        page_text = self.browser.find_element(By.TAG_NAME, 'body').text
         self.assertNotIn('Buy flowers', page_text)
         self.assertNotIn('Give a gift to Lisi', page_text)
 
