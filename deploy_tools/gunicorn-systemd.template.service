@@ -1,0 +1,11 @@
+[unit]
+Description=Gunicorn server for 39.107.143.68
+
+[Service]
+Restart=on-failure
+User=lml
+WorkingDirectory=/home/lml/sites/39.107.143.68/source
+ExecStart=/home/lml/sites/39.107.143.68/virtualenv/bin/gunicorn--bind unix:/tmp/39.107.143.68.socket notes.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
